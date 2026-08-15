@@ -79,3 +79,9 @@ The app performs scanning, filtering, mapping, rendering, settings, and demo gen
 ## Verification status
 
 The repository includes unit tests for normalization boundaries, clamping, finite output, EMA behavior, signal classification, and lost-timeout threshold logic. This environment does not provide macOS/Xcode, so a physical-device build, CoreBluetooth runtime test, signing test, and iOS Simulator test were not executed here. Static checks are documented in the delivery report.
+
+## iPhone 11 profile
+
+The Xcode target is configured for iPhone-only deployment with iOS 17.0 as the minimum version. The radar uses a compact, width-driven square canvas capped at 360 points, which fits the iPhone 11 6.1-inch portrait viewport while respecting the notch safe area. The screen remains scrollable for accessibility and larger text settings. The iPhone 11 uses an A13 Bionic processor and supports the iOS 17 deployment target used by this project.
+
+The application does not need a special iPhone 11 Bluetooth implementation. CoreBluetooth provides the same BLE central-manager API on this device; the adaptation is in the target family and layout profile rather than in a replacement scanner.

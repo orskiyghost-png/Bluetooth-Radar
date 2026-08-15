@@ -14,8 +14,9 @@ struct RadarView: View {
     }
 
     var body: some View {
-        ScrollView {
-            VStack(spacing: 20) {
+        GeometryReader { screen in
+            ScrollView {
+                VStack(spacing: 16) {
                 HStack {
                     Label(viewModel.state.title, systemImage: viewModel.state == .tracking ? "location.fill" : "exclamationmark.triangle.fill")
                         .foregroundStyle(viewModel.state == .tracking ? .green : .orange).font(.subheadline.bold())
@@ -23,7 +24,8 @@ struct RadarView: View {
                     Text(viewModel.demoMode ? "DEMO" : (viewModel.device?.name ?? "Selected device")).foregroundStyle(.secondary)
                 }
                 RadarCanvas(normalized: RSSIMapper.normalized(viewModel.currentRSSI), lost: viewModel.state == .lost, pulsing: pulsing)
-                    .frame(height: 330)
+                    .frame(width: min(screen.size.width - 32, 360), height: min(screen.size.width - 32, 360))
+                    .frame(maxWidth: .infinity)
                 VStack(spacing: 6) {
                     Text("\(Int(viewModel.currentRSSI.rounded())) dBm").font(.system(size: 34, weight: .semibold, design: .monospaced))
                     Text("Signal: \(viewModel.currentLevel.rawValue)").foregroundStyle(.cyan)
@@ -35,7 +37,11 @@ struct RadarView: View {
                 }
                 Button(role: .destructive) { viewModel.stop(); dismiss() } label: { Label("Stop Tracking", systemImage: "stop.fill").frame(maxWidth: .infinity) }
                     .buttonStyle(.borderedProminent)
-            }.padding()
+                }
+                .padding(.horizontal, 16)
+                .padding(.vertical, 10)
+            }
+            .scrollIndicators(.hidden)
         }
         .navigationTitle("Radar").navigationBarTitleDisplayMode(.inline)
         .task {
