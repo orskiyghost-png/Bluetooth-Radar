@@ -1,0 +1,58 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+		000000000000000000000001 = {isa = PBXProject; attributes = {LastSwiftUpdateCheck = 1500; LastUpgradeCheck = 1500;}; buildConfigurationList = 000000000000000000000010; compatibilityVersion = "Xcode 14.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en, Base); mainGroup = 000000000000000000000002; productRefGroup = 000000000000000000000003; projectDirPath = ""; projectRoot = ""; targets = (000000000000000000000090,000000000000000000000091); };
+		000000000000000000000002 = {isa = PBXGroup; children = (000000000000000000000030, 000000000000000000000031, 000000000000000000000032); sourceTree = "<group>"; };
+		000000000000000000000003 = {isa = PBXGroup; children = (000000000000000000000040, 000000000000000000000041); name = Products; sourceTree = "<group>"; };
+		000000000000000000000030 = {isa = PBXGroup; children = (000000000000000000000050,000000000000000000000051,000000000000000000000052,000000000000000000000053,000000000000000000000054,000000000000000000000055,000000000000000000000056,000000000000000000000057,000000000000000000000058,000000000000000000000059,00000000000000000000005A); path = BluetoothRadar; sourceTree = "<group>"; };
+		000000000000000000000031 = {isa = PBXGroup; children = (000000000000000000000060); path = BluetoothRadarTests; sourceTree = "<group>"; };
+		000000000000000000000032 = {isa = PBXGroup; children = (000000000000000000000061); path = Resources; sourceTree = "<group>"; };
+		000000000000000000000040 = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BluetoothRadar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000000000000000041 = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BluetoothRadarTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000000000000000050 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothRadarApp.swift; sourceTree = "<group>"; };
+		000000000000000000000051 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/BLEDevice.swift; sourceTree = "<group>"; };
+		000000000000000000000052 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/RadarState.swift; sourceTree = "<group>"; };
+		000000000000000000000053 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bluetooth/RSSIFilter.swift; sourceTree = "<group>"; };
+		000000000000000000000054 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bluetooth/BluetoothScanner.swift; sourceTree = "<group>"; };
+		000000000000000000000055 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels/ScannerViewModel.swift; sourceTree = "<group>"; };
+		000000000000000000000056 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels/RadarViewModel.swift; sourceTree = "<group>"; };
+		000000000000000000000057 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/ContentView.swift; sourceTree = "<group>"; };
+		000000000000000000000058 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/RadarView.swift; sourceTree = "<group>"; };
+		000000000000000000000059 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities/Haptics.swift; sourceTree = "<group>"; };
+		00000000000000000000005A = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Resources/Info.plist; sourceTree = "<group>"; };
+		000000000000000000000060 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSIAndTrackingTests.swift; sourceTree = "<group>"; };
+		000000000000000000000061 = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		000000000000000000000070 = {isa = PBXSourcesBuildPhase; files = (000000000000000000000071,000000000000000000000072,000000000000000000000073,000000000000000000000074,000000000000000000000075,000000000000000000000076,000000000000000000000077,000000000000000000000078,000000000000000000000079,000000000000000000000082); };
+		000000000000000000000071 = {isa = PBXBuildFile; fileRef = 000000000000000000000050; };
+		000000000000000000000072 = {isa = PBXBuildFile; fileRef = 000000000000000000000051; };
+		000000000000000000000073 = {isa = PBXBuildFile; fileRef = 000000000000000000000052; };
+		000000000000000000000074 = {isa = PBXBuildFile; fileRef = 000000000000000000000053; };
+		000000000000000000000075 = {isa = PBXBuildFile; fileRef = 000000000000000000000054; };
+		000000000000000000000076 = {isa = PBXBuildFile; fileRef = 000000000000000000000055; };
+		000000000000000000000077 = {isa = PBXBuildFile; fileRef = 000000000000000000000056; };
+		000000000000000000000078 = {isa = PBXBuildFile; fileRef = 000000000000000000000057; };
+		000000000000000000000079 = {isa = PBXBuildFile; fileRef = 000000000000000000000058; };
+		000000000000000000000080 = {isa = PBXResourcesBuildPhase; files = (000000000000000000000081); };
+		000000000000000000000081 = {isa = PBXBuildFile; fileRef = 00000000000000000000005A; };
+		000000000000000000000082 = {isa = PBXBuildFile; fileRef = 000000000000000000000059; };
+		000000000000000000000083 = {isa = PBXBuildFile; fileRef = 000000000000000000000060; };
+		000000000000000000000084 = {isa = PBXSourcesBuildPhase; files = (000000000000000000000083); };
+		000000000000000000000090 = {isa = PBXNativeTarget; buildConfigurationList = 000000000000000000000011; buildPhases = (000000000000000000000070,000000000000000000000080); name = BluetoothRadar; productName = BluetoothRadar; productReference = 000000000000000000000040; productType = "com.apple.product-type.application"; };
+		000000000000000000000091 = {isa = PBXNativeTarget; buildConfigurationList = 000000000000000000000012; buildPhases = (000000000000000000000084); name = BluetoothRadarTests; productName = BluetoothRadarTests; productReference = 000000000000000000000041; productType = "com.apple.product-type.bundle.unit-test"; };
+		000000000000000000000020 = {isa = PBXTargetDependency; target = 000000000000000000000090; };
+		000000000000000000000021 = {isa = PBXTargetDependency; target = 000000000000000000000091; };
+		000000000000000000000010 = {isa = XCConfigurationList; buildConfigurations = (000000000000000000000100,000000000000000000000101); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		000000000000000000000011 = {isa = XCConfigurationList; buildConfigurations = (000000000000000000000102,000000000000000000000103); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		000000000000000000000012 = {isa = XCConfigurationList; buildConfigurations = (000000000000000000000104,000000000000000000000105); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		000000000000000000000100 = {isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; SWIFT_VERSION = 5.0; }; name = Debug; };
+		000000000000000000000101 = {isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; SWIFT_VERSION = 5.0; }; name = Release; };
+		000000000000000000000102 = {isa = XCBuildConfiguration; buildSettings = { PRODUCT_BUNDLE_IDENTIFIER = com.orskiyghost.bluetooth-radar; INFOPLIST_FILE = BluetoothRadar/Resources/Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = "1,2"; }; name = Debug; };
+		000000000000000000000103 = {isa = XCBuildConfiguration; buildSettings = { PRODUCT_BUNDLE_IDENTIFIER = com.orskiyghost.bluetooth-radar; INFOPLIST_FILE = BluetoothRadar/Resources/Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = "1,2"; }; name = Release; };
+		000000000000000000000104 = {isa = XCBuildConfiguration; buildSettings = { PRODUCT_BUNDLE_IDENTIFIER = com.orskiyghost.bluetooth-radar.tests; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BluetoothRadar.app/BluetoothRadar"; }; name = Debug; };
+		000000000000000000000105 = {isa = XCBuildConfiguration; buildSettings = { PRODUCT_BUNDLE_IDENTIFIER = com.orskiyghost.bluetooth-radar.tests; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BluetoothRadar.app/BluetoothRadar"; }; name = Release; };
+	};
+	rootObject = 000000000000000000000001;
+}
